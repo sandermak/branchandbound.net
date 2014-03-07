@@ -59,6 +59,7 @@ phantomjs jasmine2-runner.js spec.html
 {% endhighlight %}
 
 Running this from a CI build is trivial. I also created a [gulp](http://gulpjs.com) plugin to do so. If there's any interest I might push that to NPM as well.
+(_update_: I just did, see [gulp-jasmine2-phantomjs](https://www.npmjs.org/package/gulp-jasmine2-phantomjs))
 
 The Jasmine 2.0 JUnit XML Reporter is a bit less configurable than the [original](https://github.com/larrymyers/jasmine-reporters) it was based on. Let me know if you need anything, and we'll make it work.
 
