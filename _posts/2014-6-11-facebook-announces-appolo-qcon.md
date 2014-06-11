@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Facebook announces Apollo at QCon NY 2014" 
-category : data 
+category : conferences 
 tags : [data, conferences]
 excerpt: "Today I attended a talk ['How Facebook Scales Big Data Systems'](https://qconnewyork.com/presentation/how-facebook-scales-big-data-systems) at QCon NY 2014. It turns out that Jeff Johnson took this opportunity to announce a new project by Facebook: Apollo. The following is a rough transcript of the talk."
 
