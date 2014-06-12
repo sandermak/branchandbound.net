@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Facebook announces Apollo at QCon NY 2014" 
-category : conferences 
+category : conferences   
 tags : [data, conferences]
 excerpt: "Today I attended a talk ['How Facebook Scales Big Data Systems'](https://qconnewyork.com/presentation/how-facebook-scales-big-data-systems) at QCon NY 2014. It turns out that Jeff Johnson took this opportunity to announce a new project by Facebook: Apollo. The following is a rough transcript of the talk."
 
@@ -16,6 +16,7 @@ Apollo is a system Facebook has been working on for about a year in their New Yo
 Facebook generally favors CP systems. They have four datacenters using master/slave style replication. Missing the 'A'vailability usually isn't a big deal within a datacenter, but across DCs it becomes troublesome.
 
 The wishlist that lead to Apollo is roughly as follows:
+
 * we need some kind of transactions
 * acked writes should be eventually visible and not lost
 * availability 
@@ -28,6 +29,7 @@ Apollo itself is written in 100% C++11, also using thrift2. The design is based 
 The shards use Paxos style quorum protocols (CP). Raft is used for consensus. Fun sidenote: this turned out to be not much simpler than multi-paxos, even though that was the expectation.
 
 RocksDB (a key-val store, log-structured storage) or MySQL can be used as underlying storage. The storage primitives offered by Apollo are:
+
 * binary value
 * map
 * pqueue
