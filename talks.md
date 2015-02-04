@@ -17,18 +17,29 @@ Here are some talks I've given at usergroups and conferences:
 		</tr>
 	</thead>
 	<tr>
+		<td>Provisioning the IoT</td>
+		<td><a href="http://www.jfokus.se/jfokus/talks.jsp#ProvisioningtheIoT">Jfokus</a> (Sweden)</td>
+		<td>2015</td>
+		<td><a href="http://www.slideshare.net/SanderMak/provisioning-the-iot">slides</a></td>
+	</tr>
+	<tr>
 		<td>Event-sourced Architectures with Akka</td>
 		<td><a href="https://oracleus.activeevents.com/2014/connect/sessionDetail.ww?SESSION_ID=1849">JavaOne</a> (USA),
-			<a href="http://www.nljug.org/jfall/session/event-sourced-architectures-with-akka/69/">J-Fall</a> (Holland)
+			<a href="http://www.nljug.org/jfall/session/event-sourced-architectures-with-akka/69/">J-Fall</a> (Holland),
+			<a href="http://www.jfokus.se/jfokus/talks.jsp#Event-sourcedArchite">Jfokus</a> (Sweden)
 		</td>
-		<td>2014</td>
-		<td><a href="http://www.slideshare.net/SanderMak/eventsourced-architectures-with-akka">slides</a></td>
+		<td>2015, 2014</td>
+		<td><a href="http://www.slideshare.net/SanderMak/eventsourced-architectures-with-akka">slides</a>,
+		    <a href="https://parleys.com/talk/event-sourced-architectures-akka">slides+audio</a>
+		 </td>
 	</tr>
 	<tr>
 		<td>TypeScript: Coding JavaScript without the Pain</td>
 		<td><a href="https://oracleus.activeevents.com/2014/connect/sessionDetail.ww?SESSION_ID=1853">JavaOne</a> (USA)</td>
 		<td>2014</td>
-		<td><a href="http://www.slideshare.net/SanderMak/typescript-coding-javascript-without-the-pain">slides</a></td>
+		<td><a href="http://www.slideshare.net/SanderMak/typescript-coding-javascript-without-the-pain">slides</a>,
+		    <a href="https://parleys.com/talk/typescript-java-developers-coding-javascript-without-pain">slides+audio</a>
+		</td>
 	</tr>
 	<tr>
 		<td>The Ultimate Dependency Manager Shootout</td>
