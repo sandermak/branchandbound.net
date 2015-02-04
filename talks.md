@@ -49,7 +49,7 @@ Here are some talks I've given at usergroups and conferences:
 	</tr>
 	<tr>
 		<td>Modular JavaScript</td>
-		<td><a href="http://www.oracle.com/javaone/index.html">JavaOne</a> (USA) &amp; <a href="http://www.nljug.org/jfall/session/modular-javascript/45/">J-Fall</a> (Holland) &amp; <a href="http://www.javaland.eu">JavaLand</a> (Germany) &amp; <a href="">GeeCON (Poland)</a> &amp; <a href="https://qconnewyork.com/presentation/modular-javascript-osgi-world">QCon New York</a> (USA)</td>
+		<td><a href="http://www.oracle.com/javaone/index.html">JavaOne</a> (USA) &amp; <a href="http://www.nljug.org/jfall/session/modular-javascript/45/">J-Fall</a> (Holland) &amp; <a href="http://www.javaland.eu">JavaLand</a> (Germany) &amp; <a href="">GeeCON</a> (Poland) &amp; <a href="https://qconnewyork.com/presentation/modular-javascript-osgi-world">QCon New York</a> (USA)</td>
 		<td>2014, 2013</td>
 		<td><a href="http://www.slideshare.net/SanderMak/modular-javascript-26558391">slides</a>, 
 		    <a href="http://vimeo.com/100229734">video (English)</a>, <a href="http://parleys.com/play/52af832ae4b04354fb7e8aae">video (Dutch)</a></td>
@@ -70,7 +70,7 @@ Here are some talks I've given at usergroups and conferences:
 	</tr>
 	<tr>
 		<td>Cross-Build Injection attacks: how safe is your Java build?</td>
-		<td><a href="http://www.oracle.com/javaone/index.html">JavaOne</a> (USA) &amp; <a href="http://www.nljug.org/jfall/">J-Fall</a></td>
+		<td><a href="http://www.oracle.com/javaone/index.html">JavaOne</a> (USA) &amp; <a href="http://www.nljug.org/jfall/">J-Fall</a> (Holland)</td>
 		<td>2012</td>
 		<td><a href="https://www.slideshare.net/SanderMak/crossbuild-injection-attacks-how-safe-is-your-java-build">slides</a>,
 		    <a href="http://www.youtube.com/watch?v=K2aTRS8uvY4&amp;list=PLKCk3OyNwIzsR4S-A62e73qi1ZV3phwS6">slides+audio</a>, <a href="http://parleys.com/play/5148922b0364bc17fc56c892/chapter0/about">video (Dutch)</a></td>
