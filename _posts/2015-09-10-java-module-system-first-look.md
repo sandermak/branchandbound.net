@@ -108,7 +108,7 @@ That's not enough. If you compile with this change, you still get the same error
        requires module2;
     }
 
-Requirements are expressed on other bundles by name, whereas exports are defined in terms of packages. Much can be said about this choice, but I won't go into this for a first look. After making this change, we have our first successful compilation of a multi-module build using the Jigsaw prototype. If you look inside the ```/mods``` directory, you see the compiled artifacts neatly separated into two directories.  Congratulations!
+Requirements are expressed on other modules by name, whereas exports are defined in terms of packages. Much can be said about this choice, but I won't go into this for a first look. After making this change, we have our first successful compilation of a multi-module build using the Jigsaw prototype. If you look inside the ```/mods``` directory, you see the compiled artifacts neatly separated into two directories.  Congratulations!
 
 ### Running modular code
 Just compiling is not much fun of course. We also want to see the app running. Fortunately, the JRE and JDK have also been made module-aware in this prototype. The application can be started by defining a modulepath rather than classpath:
