@@ -42,7 +42,8 @@ Being as dynamic as OSGi isn't a goal of the JPMS.
 So to keep expectations in check, I'm already happy if we can port the module and service structure at startup.
 Adding and removing new modules dynamically will have to wait for now.
 
-The first step for re-creating this example in the JPMS was to find out what should go into the ```module-info.java``` descriptors. 
+Our challenge is to translate the OSGi bundles into equivalent Jigsaw modules.
+The first step for re-creating this example in the JPMS is to find out what should go into the ```module-info.java``` descriptors. 
 These module descriptors contain the dependency information for Java modules. 
 It is similar to the OSGi meta-data in the manifest file of OSGi jars.
 
@@ -110,9 +111,11 @@ You could document this as part of the Dashboard API module, but that's error-pr
 The `public` keyword in the requires-clauses solves this.
 Effectively, it re-exports the public packages from the required module as part of the Dashboard API module.
 Now, the app implementation modules can require the Dashboard API module without having to worry about requiring javafx.graphics.
-This solution is similar to what OSGi calls 'uses-constraints'.
+Without the public keyword, compilation fails unless the consuming module itself imports the javafx.graphics module.
+
+This re-exporting mechanism solves the same problem that OSGi 'uses-constraints' solve.
 It goes a bit further though.
-With the re-exporting facility in the JPMS, you can create an 'empty' module that acts as a façade.
+With the re-exporting mechanism in the JPMS, you can create an 'empty' module that acts as a façade.
 The public exports in the module descriptor of this empty module can aggregate several other modules.
 As an example, you can use this mechanism to split a module into multiple modules without breaking consumers.
 They still require the same module, only now it 'delegates' to other modules.
@@ -139,11 +142,10 @@ module carprov.dashboard.jfx {
    requires javafx.swing;
 
    uses carprov.dashboard.api.App;
-   provides carprov.dashboard.api.App with carprov.dashboard.jfx.ConfigurationApp;
 }
 {% endhighlight %}
 
-The interesting part is the penultimate line of the module descriptor: ```uses carprov.dashboard.api.App;```.
+The interesting part is the last line of the module descriptor: ```uses carprov.dashboard.api.App;```.
 With this uses-clause, we tell the JPMS that we are interested in instances of App interface.
 Subsequently, the dashboard can use the [ServiceLoader API](http://cr.openjdk.java.net/~mr/jigsaw/spec/api/java/util/ServiceLoader.html) to retrieve these instances:
 
@@ -175,7 +177,7 @@ It indicates that we want to expose an App instance, using the concrete PhoneApp
 Note that PhoneApp's package is not exported.
 Nobody can instantiate it but the JPMS, or another class inside the same module.
 There is one requirement for a service class: it must have a default no-arg constructor.
-You can even provide services and consume them in the same module, as witnessed by the provides-clause following the uses-clause in the module descriptor of the dashboard implementation module earlier.
+You can even provide services and consume them in the same module. See the [actual source](https://github.com/sandermak/carprov-jigsaw/blob/master/src/carprov.dashboard.jfx/module-info.java) of the Dashboard implementation for an example of both a uses and provides-clause in the same module descriptor.
 
 Now the JPMS knows that the dashboard implementation module wants to see App instances, and the Phone module (and others) provide these instances.
 If at any time an additional service implementing the App interface is put on the modulepath, the dashboard will pick it up without modifications to the module descriptor.
@@ -203,7 +205,7 @@ The class calling this method must be in the same module that contains the resou
 Otherwise, null is returned.
 
 The original OSGi implementation delegated loading resources to a helper class in the Dashboard API bundle.
-It did this by passing the [BundleContext](https://osgi.org/javadoc/r4v43/core/org/osgi/framework/BundleContext.html)  of the requesting bundle to this helper class:
+It did this by passing the [BundleContext](https://osgi.org/javadoc/r4v43/core/org/osgi/framework/BundleContext.html)  of the requesting bundle to this helper class. The BundleContext provides access to the bundle and its meta-data.
 
 {% highlight java %}
 public static ImageView getImageByFullname(BundleContext bundleContext, String name) {
