@@ -7,7 +7,7 @@ excerpt: "In my [last post](/blog/java/2015/09/java-module-system-first-look) I 
 ---
 
 If you want an introduction on what the new Java Platform Module System (referred to as JPMS hereafter) entails and how to get started, read ['The Java Module system: a first look'](/blog/java/2015/09/java-module-system-first-look). 
-This post assumes you're familiar with the basics of the proposed module system. And if you're the kind of person who just wants to see the code: [here you go](https://github.com/sandermak/carprov-jigsaw).
+This post assumes you're familiar with the basics of the proposed module system. And if you're the kind of person who just wants to see the code: [here you go](https://github.com/sandermak/carprov-jigsaw/tree/v1).
 
 ### The original OSGi application
 Before diving into the Jigsaw port, let's have a look what the original application is all about:
@@ -56,7 +56,7 @@ module carprov.dashboard.api {
 }
 {% endhighlight %}
 
-You can find the full code for the Jigsaw version of the dashboard [on GitHub](https://github.com/sandermak/carprov-jigsaw) if you want to follow along. It compiles and runs on [build b86](http://openjdk.java.net/projects/jigsaw/ea) of the Jigsaw-enabled JDK.
+You can find the full code for the Jigsaw version of the dashboard [on GitHub](https://github.com/sandermak/carprov-jigsaw/tree/v1) if you want to follow along. It compiles and runs on [build b86](http://openjdk.java.net/projects/jigsaw/ea) of the Jigsaw-enabled JDK.
 
 We declare a module with the name ```carprov.dashboard.api```, exporting a package of the same name.
 Meaning the interface and helper class inside this package are visible to all modules that import this module.
