@@ -16,7 +16,7 @@ The sample app provides an alternative front-end to YouTube.
 You can search for live music by providing an artist name.
 Search results can either be stored, or played directly.
 The playlist is backed by localstorage.
-It's not a large application by any means, but it's not a toy application either.
+It's not a large application by any means, but it's not a toy example either.
 This is 'YouTube live!' in action:
 
 ![YT Live example app](/pics/ytlive.png)
@@ -322,7 +322,7 @@ There's also lots of outdated information on the web, especially given the pace 
 This article itself will be no exception, probably.
 
 Still, a more stable period is forthcoming with the Angular2 beta nearing.
-Now is definitely a good time to start learning the concepts of Angular2, but don't expect it to be a beginner-friendly experience.
+Now is a good time to start learning the concepts of Angular2, but don't expect it to be a beginner-friendly experience.
 There's definitely some rough edges to Angular2, but all in all it looks very promising to me.
 
 Play around with [the code](https://github.com/sandermak/ytlive-angular2) for YouTube live and let me know what you think!
