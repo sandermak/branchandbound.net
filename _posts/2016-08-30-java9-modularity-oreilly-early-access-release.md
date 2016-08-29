@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Java 9 Modularity: Early Access Release" 
+title: "Java 9 Modularity: O'Reilly Early Access Release" 
 category : java 
 tags : [java, book, modularity]
 excerpt: "Early this year my colleague [Paul Bakker](http://paulbakker.io) and I started working on the first drafts of Java 9 Modularity.
