@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Exploring Angular2" 
-category : web 
+title: "Exploring Angular2"
+category : web
 tags : [javascript, angularjs, web]
 excerpt: "AngularJS 1.x gained an unprecedented following in the past few years. We use it heavily in our applications, too. All the more reason to dive into the next iteration of this widely popular framework: Angular2."
 ---
 
-The Angular team is currently chipping away at their backlog, promising a [beta version](https://github.com/angular/angular/milestones) 'real soon now'™. 
+The Angular team is currently chipping away at their backlog, promising a [beta version](https://github.com/angular/angular/milestones) 'real soon now'™.
 Meanwhile, I've been playing around with their alpha releases.
 Yes, that is as painful as [it sounds](https://github.com/angular/angular/blob/master/CHANGELOG.md).
 Still, it gave me a solid understanding of where the framework is conceptually heading.
@@ -115,7 +115,7 @@ _playlist.html_:
 
 Together, the template and component class form a reusable whole.
 Through the selector property on the @Component annotation, we control how this component can be instantiated in templates.
-In the template above, we similarly use the ```playlist-entry``` element to instantiate nested components for each ```entry``` we have in the ```PlaylistComponent```. 
+In the template above, we similarly use the ```playlist-entry``` element to instantiate nested components for each ```entry``` we have in the ```PlaylistComponent```.
 These entries come from the getter method ```entries()``` on that component.
 Using the ```[entry]="entry"``` syntax we pass the current entry in the iteration to the nested component instance's ```entry``` property (which is just a plain class member on the PlaylistEntryComponent class).
 
@@ -153,7 +153,7 @@ It is also possible to define custom events and trigger behavior throughout the 
 However, not all custom events are propagated correctly yet in the alpha-versions I worked with.
 You will not find an example of using custom events in YouTube live!, but you can find more information in [this post](http://schwarty.com/2015/08/14/angular2-eventemitter-and-custom-event-name/).
 
-An example of shared components in action is playing a video in YouTube live. 
+An example of shared components in action is playing a video in YouTube live.
 It's possible to start a video both from the playlist entries and the search results.
 This shared functionality can be achieved by simply creating a VideoPlayer class with the appropriate methods and state:
 
@@ -250,7 +250,7 @@ The ```[src]``` syntax binds the src property of the iframe to the ```embedUrl``
 If the embedUrl changes, the src of the iframe is automatically updated (but not the other way around).
 
 ### Http service
-Angular is more than just a front-end component framework. 
+Angular is more than just a front-end component framework.
 In AngularJS 1.x there was an $http service to do backend calls.
 The same applies to Angular2.
 Instead of returning (their own flavor) of Promises like in 1.x, the new Http component returns [RX Observables](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/observable.md).
@@ -268,13 +268,10 @@ export class ConcertService {
   constructor(private http: Http) { }
 
   public findConcerts(artist: string, duration = Duration.FULLCONCERT): any {
-    var ytDuration: string;
-    
-    // .. snipped for brevity ..
+   var ytDuration: string
+   var searchString = yt_search + ytDuration + '&q=' + encodeURIComponent('live ' + artist);
 
-    var searchString = yt_search + ytDuration + '&q=' + encodeURIComponent('live ' + artist);
-
-    return this.http.get(searchString).map((res: any) => {
+   return this.http.get(searchString).map((res: any) => {
       var ytResults: {items: YTSearchResult[] } = res.json();
       var transformedResults = ytResults.items.map(this.toConcertSummary)
       this.concerts = transformedResults;
@@ -294,7 +291,7 @@ The resulting Observable is used in the ```searchConcerts``` method on SearchCom
 
 {% highlight javascript %}
 export class SearchComponent {
-  
+
   private concerts: ytbackend.ConcertSummary[] = [];
 
   constructor(private concertService: ytbackend.ConcertService,
