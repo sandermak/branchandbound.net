@@ -1,6 +1,7 @@
 ---
 title: About Sander Mak
-layout: default 
+layout: default
+permalink: /about.html
 ---
 # Sander Mak
 After getting his master's degree in Software Technology, Sander became a software developer/architect specializing in Java and application integration. Recently, data analysis and machine learning were added to his list of interests.
