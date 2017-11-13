@@ -18,18 +18,61 @@ Here are some talks I've given at usergroups and conferences:
 		</tr>
 	</thead>
 	<tr>
+		<td>Designing for Modularity with Java 9</td>
+		<td>
+		  <a href="http://javaone.com">JavaOne</a> (San Francisco)
+			&amp; <a href="https://jfall.nl">J-Fall</a> (The Netherlands)
+			&amp; <a href="https://www.codeeurope.pl/en">Code Europe</a> (Poland)
+		</td>
+		<td>2017</td>
+		<td>
+			<a href="https://www.slideshare.net/SanderMak/desiging-for-modularity-with-java-9">slides</a>
+		</td>
+	</tr>
+	<tr>
+		<td>Modules or Microservices?</td>
+		<td>
+			<a href="https://conferences.oreilly.com/software-architecture/sa-ny">O'Reilly Software Architecture Conference</a> (New York)
+			&amp; <a href="https://devcon.luminis.eu/">Luminis DevCon</a> (The Netherlands)
+			&amp; <a href="http://www.javaone.com">JavaOne</a> (San Francisco)
+		</td>
+		<td>2017</td>
+		<td>
+			<a href="https://www.slideshare.net/SanderMak/modules-or-microservices">slides</a>,
+			<a href="https://www.safaribooksonline.com/library/view/oreilly-software-architecture/9781491976203/video302661.html">video (English, requires Safari subscription)</a>,
+			<a href="https://www.youtube.com/watch?v=fDoiydWS3D4&t">video (Dutch)</a>
+		</td>
+	</tr>
+	<tr>
+		<td>Migrating to Java 9 Modules</td>
+		<td>
+		  <a href="http://javaland.eu/">JavaLand</a> (Germany)
+			&amp; <a href="https://oredev.org">Øredev</a> (Sweden)
+		</td>
+		<td>2017</td>
+		<td>
+			<a href="https://www.slideshare.net/SanderMak/migrating-to-java-9-modules">slides</a>
+		</td>
+	</tr>
+	<tr>
 		<td>Java 9 Modularity in Action</td>
 		<td>
 			<a href="http://javaland.eu/">JavaLand</a> (Germany)
 			&amp; <a href="https://devcon.luminis.eu/">Luminis DevCon</a> (The Netherlands)
 			&amp; <a href="http://2016.geecon.org/">GeeCON</a> (Poland)
 			&amp; <a href="http://www.devoxx.co.uk/">Devoxx UK</a> (UK)
+			&amp; <a href="http://www.devoxx.be/">Devoxx Belgium</a> (UK)
 			&amp; <a href="http://www.devnation.org/">DevNation</a> (San Francisco)
+			&amp; <a href="https://jokerconf.com/en/">JokerConf</a> (Russia)
+			&amp; <a href="https://jfall.nl">J-Fall</a> (The Netherlands)
+			&amp; <a href="https://oredev.org">Øredev</a> (Sweden)
+			&amp; <a href="https://geekout.ee">Geekout</a> (Estonia)
+			&amp; <a href="https://www.codeeurope.pl/en">Code Europe</a> (Poland)
 		</td>
-		<td>2016</td>
+		<td>2016, 2017</td>
 		<td>
 			<a href="http://www.slideshare.net/SanderMak/java-9-modularity-in-action">slides</a>,
-			<a href="https://www.youtube.com/watch?v=XwXL7urUlP4">video (English)</a>,
+			<a href="https://www.youtube.com/watch?v=6ewlhP-k1fA">video (English)</a>,
 			<a href="https://www.youtube.com/watch?v=DWyKc4gHglk">video (Dutch)</a>
 		</td>
 	</tr>
