@@ -29,7 +29,7 @@ Once a gigantic monolithic codebase, it is now neatly modularized into recogniza
 Modularizing the JDK makes it future proof.
 Through strong encapsulation in modules, internal packages can truly stay private, allowing evolution of internal code as was envisioned from the start.
 Before strong module boundaries, it was all too easy to 'accidentally' rely on non-public APIs.
-Explicit dependencies ensure there's backsliding into a big ball of mud.
+Explicit dependencies ensure there's no backsliding into a big ball of mud.
 
 The nice thing is, with Java 9 you can use the very same module system used to modularize the JDK to modularize your own applications.
 Translate those boxes and arrows on your whiteboard into actual Java modules, with module boundaries and dependencies enforced by the Java compiler and runtime.
