@@ -102,11 +102,14 @@ For Maven, make sure the jar plugin has the following configuration:
 With Gradle, you can configure the jar plugin as follows:
 
 ```
+ext.moduleName = "com.acme.mylibrary"
+
 jar {
+    inputs.property("moduleName", moduleName)
+
     manifest {
-        name = "mylibrary"
-        instruction "Automatic-Module-Name", "com.acme.mylibrary"
-    }
+       attributes  'Automatic-Module-Name': moduleName
+   }
 }
 ```
 
